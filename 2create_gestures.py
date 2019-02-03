@@ -48,6 +48,7 @@ def store_images(g_id):
 
 	create_folder("gestures/"+str(g_id))
 	create_folder("train_images/"+str(g_id))
+	create_folder("test_images/"+str(g_id))
 	pic_no = 0
 	flag_start_capturing = False
 	frames = 0
@@ -86,6 +87,7 @@ def store_images(g_id):
 				cv2.putText(img, "Capturing...", (30, 60), cv2.FONT_HERSHEY_TRIPLEX, 2, (127, 255, 255))
 				cv2.imwrite("gestures/"+str(g_id)+"/"+str(pic_no)+".jpg", save_img)
 				cv2.imwrite("train_images/"+str(g_id)+"/"+str(pic_no)+".jpg", imgReal)
+				cv2.imwrite("test_images/"+str(g_id)+"/"+str(pic_no)+".jpg", imgReal)
 
 		cv2.rectangle(img, (x,y), (x+w, y+h), (0,255,0), 2)
 		cv2.putText(img, str(pic_no), (30, 400), cv2.FONT_HERSHEY_TRIPLEX, 1.5, (127, 127, 255))
