@@ -12,7 +12,7 @@ IMG_SIZE = 50
 training_data = []
 x_train = []
 y_train = []
-num_of_class = 10
+num_of_class = 44
 
 
 def create_trainig_data():

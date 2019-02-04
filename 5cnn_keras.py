@@ -48,14 +48,14 @@ def cnn_model():
 	return model, callbacks_list
 
 def train():
-	with open("train_images", "rb") as f:
+	with open("train_images_pk", "rb") as f:
 		train_images = np.array(pickle.load(f))
-	with open("train_labels", "rb") as f:
+	with open("train_labels_pk", "rb") as f:
 		train_labels = np.array(pickle.load(f), dtype=np.int32)
 
-	with open("test_images", "rb") as f:
+	with open("test_images_pk", "rb") as f:
 		test_images = np.array(pickle.load(f))
-	with open("test_labels", "rb") as f:
+	with open("test_labels_pk", "rb") as f:
 		test_labels = np.array(pickle.load(f), dtype=np.int32)
 
 	train_images = np.reshape(train_images, (train_images.shape[0], image_x, image_y, 1))
